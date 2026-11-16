@@ -1,18 +1,18 @@
-import React, { useMemo, useState } from 'react';
-import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
-import { Image } from 'expo-image';
 import { LinearGradientFallback } from '@/components/Overlay';
-import { Ionicons } from '@expo/vector-icons';
-import { router } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import ProductCard from '@/components/ProductCard';
 import WishlistSheet from '@/components/WishlistSheet';
 import { Button, Loading, SectionTitle } from '@/components/ui';
-import { useCatalog } from '@/lib/useProducts';
 import { useAuth } from '@/lib/auth';
 import { colors, label } from '@/lib/theme';
 import { useToast } from '@/lib/toast';
 import type { Product } from '@/lib/types';
+import { useCatalog } from '@/lib/useProducts';
+import { Ionicons } from '@expo/vector-icons';
+import { Image } from 'expo-image';
+import { router } from 'expo-router';
+import { useMemo, useState } from 'react';
+import { Pressable, RefreshControl, ScrollView, StyleSheet, Text, View, useWindowDimensions } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const HERO = 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1974&auto=format&fit=crop';
 const FALLBACK_CAT = 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=800&auto=format&fit=crop';
@@ -88,7 +88,7 @@ export default function Home() {
             <Button
               title="Câu chuyện"
               variant="outline"
-              style={{ flex: 1, borderColor: 'rgba(255,255,255,0.3)' }}
+              style={{ flex: 1, borderColor: 'rgba(255,255,255,0.3)', backgroundColor: '#EF4444' }}
               onPress={() => router.push('/about')}
             />
           </View>
