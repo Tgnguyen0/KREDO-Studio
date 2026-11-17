@@ -1,8 +1,7 @@
-import React from 'react';
-import { ScrollView, Text, View } from 'react-native';
 import { Button } from '@/components/ui';
-import { router } from 'expo-router';
 import { colors, label } from '@/lib/theme';
+import { router } from 'expo-router';
+import { ScrollView, Text, View } from 'react-native';
 
 const VALUES = [
   { t: 'Tối giản', d: 'Sức mạnh nằm ở sự tinh gọn. Chúng tôi loại bỏ những chi tiết rườm rà.' },
